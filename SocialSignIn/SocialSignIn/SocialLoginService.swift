@@ -77,7 +77,6 @@ public class SocialLoginService: NSObject {
                     
                     let dictionary = try JSONSerialization.jsonObject(with: data!,
                                                                       options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
-                    
                     let accessToken = dictionary["access_token"] as! String
                     
                     UserDefaults.standard.set(accessToken, forKey: "LIAccessToken")
@@ -111,8 +110,6 @@ public class SocialLoginService: NSObject {
         
         guard let requestUrl = URL(string: authorizationURL) else { return }
         let request = URLRequest(url: requestUrl)
-        
-//        let request = URLRequest(url: URL(string: authorizationURL)!)
         webView.loadRequest(request)
     }
     

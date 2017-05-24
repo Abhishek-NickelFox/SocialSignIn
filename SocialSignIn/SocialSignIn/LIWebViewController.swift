@@ -31,20 +31,18 @@ class LIWebViewController: UIViewController, UIWebViewDelegate {
 
 extension LIWebViewController {
 
-    // MARK: UIWebViewDelegate Functions
-    
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         let url = request.url!
         print(url)
         
         if url.host == "com.nickelfox.linkedin.oauth" {
             if url.absoluteString.range(of: "code") != nil {
-                // Extract the authorization code.
+               
                 let urlParts = url.absoluteString.components(separatedBy: "?")
                 let code = urlParts[1].components(separatedBy: "=")[1]
                 
                 SocialLoginService().requestForAccessToken(code, completion: { (accessToken) in
-                    print("SUCESS ACCESSTOKEN:  \(accessToken)")
+                    print("SUCESS ACCESS_TOKEN:  \(accessToken)")
                     DispatchQueue.main.async{
                         self.dismiss(animated: true, completion: nil)
                     }
