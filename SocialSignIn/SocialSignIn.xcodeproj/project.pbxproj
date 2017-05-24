@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465DE5941ED57D230023B089 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 465DE5931ED57D230023B089 /* linkedin-sdk.framework */; };
+		465DE5961ED5A23C0023B089 /* LIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465DE5951ED5A23C0023B089 /* LIWebViewController.swift */; };
 		46930EB81ED56C4000FE50A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930EB71ED56C4000FE50A5 /* AppDelegate.swift */; };
 		46930EBA1ED56C4000FE50A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930EB91ED56C4000FE50A5 /* ViewController.swift */; };
 		46930EBD1ED56C4000FE50A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46930EBB1ED56C4000FE50A5 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		46930EC21ED56C4000FE50A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46930EC01ED56C4000FE50A5 /* LaunchScreen.storyboard */; };
 		46930ECD1ED56C4000FE50A5 /* SocialSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930ECC1ED56C4000FE50A5 /* SocialSignInTests.swift */; };
 		46930ED81ED56C4000FE50A5 /* SocialSignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930ED71ED56C4000FE50A5 /* SocialSignInUITests.swift */; };
+		46930EE91ED56E9C00FE50A5 /* SocialLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		462E4EFF1ED5731C00A0885C /* SocialSignIn-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SocialSignIn-Bridging-Header.h"; path = "SocialSignIn/SocialSignIn-Bridging-Header.h"; sourceTree = "<group>"; };
+		465DE5931ED57D230023B089 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "Frameworks/linkedin-sdk.framework"; sourceTree = "<group>"; };
+		465DE5951ED5A23C0023B089 /* LIWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LIWebViewController.swift; sourceTree = "<group>"; };
 		46930EB41ED56C4000FE50A5 /* SocialSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46930EB71ED56C4000FE50A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46930EB91ED56C4000FE50A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		46930ED31ED56C4000FE50A5 /* SocialSignInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialSignInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46930ED71ED56C4000FE50A5 /* SocialSignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignInUITests.swift; sourceTree = "<group>"; };
 		46930ED91ED56C4000FE50A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46930EE61ED56D1300FE50A5 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "SocialSignIn/SocialSDK/linkedin-sdk.framework"; sourceTree = "<group>"; };
+		46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465DE5941ED57D230023B089 /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +86,12 @@
 		46930EAB1ED56C4000FE50A5 = {
 			isa = PBXGroup;
 			children = (
+				462E4EFF1ED5731C00A0885C /* SocialSignIn-Bridging-Header.h */,
 				46930EB61ED56C4000FE50A5 /* SocialSignIn */,
 				46930ECB1ED56C4000FE50A5 /* SocialSignInTests */,
 				46930ED61ED56C4000FE50A5 /* SocialSignInUITests */,
 				46930EB51ED56C4000FE50A5 /* Products */,
+				46930EE51ED56D1200FE50A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +114,8 @@
 				46930EBE1ED56C4000FE50A5 /* Assets.xcassets */,
 				46930EC01ED56C4000FE50A5 /* LaunchScreen.storyboard */,
 				46930EC31ED56C4000FE50A5 /* Info.plist */,
+				46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */,
+				465DE5951ED5A23C0023B089 /* LIWebViewController.swift */,
 			);
 			path = SocialSignIn;
 			sourceTree = "<group>";
@@ -123,6 +136,15 @@
 				46930ED91ED56C4000FE50A5 /* Info.plist */,
 			);
 			path = SocialSignInUITests;
+			sourceTree = "<group>";
+		};
+		46930EE51ED56D1200FE50A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				465DE5931ED57D230023B089 /* linkedin-sdk.framework */,
+				46930EE61ED56D1300FE50A5 /* linkedin-sdk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,15 +215,18 @@
 				TargetAttributes = {
 					46930EB31ED56C4000FE50A5 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = NY45473NT8;
 						ProvisioningStyle = Automatic;
 					};
 					46930EC71ED56C4000FE50A5 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = NY45473NT8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 46930EB31ED56C4000FE50A5;
 					};
 					46930ED21ED56C4000FE50A5 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = NY45473NT8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 46930EB31ED56C4000FE50A5;
 					};
@@ -260,6 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46930EBA1ED56C4000FE50A5 /* ViewController.swift in Sources */,
+				46930EE91ED56E9C00FE50A5 /* SocialLoginService.swift in Sources */,
+				465DE5961ED5A23C0023B089 /* LIWebViewController.swift in Sources */,
 				46930EB81ED56C4000FE50A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,10 +441,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NY45473NT8;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialSignIn/SocialSDK",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SocialSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignIn;
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignIn.free;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/abhishek/Documents/SocialSignIn/SocialSignIn/SocialSignIn/SocialSignIn-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +463,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NY45473NT8;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SocialSignIn/SocialSDK",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = SocialSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignIn;
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignIn.free;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/abhishek/Documents/SocialSignIn/SocialSignIn/SocialSignIn/SocialSignIn-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -439,6 +486,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = SocialSignInTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignInTests;
@@ -453,6 +501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = SocialSignInTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignInTests;
@@ -466,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = SocialSignInUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignInUITests;
@@ -479,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = SocialSignInUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.SocialSignInUITests;
@@ -507,6 +558,7 @@
 				46930EDE1ED56C4000FE50A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46930EDF1ED56C4000FE50A5 /* Build configuration list for PBXNativeTarget "SocialSignInTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +567,7 @@
 				46930EE11ED56C4000FE50A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46930EE21ED56C4000FE50A5 /* Build configuration list for PBXNativeTarget "SocialSignInUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +576,7 @@
 				46930EE41ED56C4000FE50A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

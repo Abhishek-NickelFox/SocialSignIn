@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginAction(_ sender: Any) {
+        
+        let vc = UIStoryboard.initVC(id: "LIWebViewController")
+        self.present(vc, animated: true, completion: nil)
+    }
 
 }
 
+extension UIStoryboard {
+    
+    class func getStoryboard() -> UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    class func initVC(id: String) -> UIViewController {
+        return getStoryboard().instantiateViewController(withIdentifier: id)
+    }
+}
