@@ -38,3 +38,24 @@ extension UIStoryboard {
         return getStoryboard().instantiateViewController(withIdentifier: id)
     }
 }
+
+extension UIImageView {
+    
+    func downloadImage(from url: String) {
+        if let webUrl = URL(string: url) {
+            let urlRequest = URLRequest(url: webUrl)
+            let task = URLSession.shared.dataTask(with: urlRequest)  { (imgData, responce, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                DispatchQueue.main.async {
+                    if let data = imgData {
+                        self.image = UIImage(data: data)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+}

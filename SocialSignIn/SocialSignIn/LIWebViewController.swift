@@ -44,7 +44,9 @@ extension LIWebViewController {
                 SocialLoginService().requestForAccessToken(code, completion: { (accessToken) in
                     print("SUCESS ACCESS_TOKEN:  \(accessToken)")
                     DispatchQueue.main.async{
-                        self.dismiss(animated: true, completion: nil)
+//                        self.dismiss(animated: true, completion: nil)
+                        let vc = UIStoryboard.initVC(id: "UserProfileViewController")
+                        self.present(vc, animated: true, completion: nil)
                     }
                 })
             }

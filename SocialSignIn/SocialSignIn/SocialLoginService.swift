@@ -113,4 +113,40 @@ public class SocialLoginService: NSObject {
         webView.loadRequest(request)
     }
     
+    func getUserProfile(completion: @escaping(_ profile: UserProfile) -> Void) {
+    
+        if let accessToken = UserDefaults.standard.object(forKey: "LIAccessToken") {
+            
+            let targetURLString = "https://api.linkedin.com/v1/people/~:(public-profile-url,first-name,last-name,email-address,picture-url)?format=json"
+            let request = NSMutableURLRequest(url: URL(string: targetURLString)!)
+            request.httpMethod = "GET"
+            request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+
+            let task : URLSessionDataTask = session.dataTask(with: request as URLRequest) { (data, response, error) in
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                
+                if statusCode == 200 {
+                   
+                    do {
+                        let dict = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: Any]
+                        
+                        print(dict)
+                        let profileUrl = dict["publicProfileUrl"] as! String
+                        let firstName = dict["firstName"] as! String
+                        let lastName = dict["lastName"] as! String
+                        let pictureUrl = dict["pictureUrl"] as! String
+                        let profile = UserProfile(firstName: firstName, lastName: lastName, imageUrl: pictureUrl, profileUrl: profileUrl)
+                        completion(profile)
+                    }
+                    catch {
+                        print("Could not convert JSON data into a dictionary.")
+                    }
+                }
+            }
+            task.resume()
+        }
+    
+    }
+    
 }

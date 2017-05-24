@@ -17,6 +17,7 @@
 		46930ECD1ED56C4000FE50A5 /* SocialSignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930ECC1ED56C4000FE50A5 /* SocialSignInTests.swift */; };
 		46930ED81ED56C4000FE50A5 /* SocialSignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930ED71ED56C4000FE50A5 /* SocialSignInUITests.swift */; };
 		46930EE91ED56E9C00FE50A5 /* SocialLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */; };
+		46B2E1071ED5B51E00082427 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2E1061ED5B51E00082427 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		46930ED91ED56C4000FE50A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46930EE61ED56D1300FE50A5 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "SocialSignIn/SocialSDK/linkedin-sdk.framework"; sourceTree = "<group>"; };
 		46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginService.swift; sourceTree = "<group>"; };
+		46B2E1061ED5B51E00082427 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				46930EC31ED56C4000FE50A5 /* Info.plist */,
 				46930EE81ED56E9C00FE50A5 /* SocialLoginService.swift */,
 				465DE5951ED5A23C0023B089 /* LIWebViewController.swift */,
+				46B2E1061ED5B51E00082427 /* UserProfileViewController.swift */,
 			);
 			path = SocialSignIn;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46930EBA1ED56C4000FE50A5 /* ViewController.swift in Sources */,
+				46B2E1071ED5B51E00082427 /* UserProfileViewController.swift in Sources */,
 				46930EE91ED56E9C00FE50A5 /* SocialLoginService.swift in Sources */,
 				465DE5961ED5A23C0023B089 /* LIWebViewController.swift in Sources */,
 				46930EB81ED56C4000FE50A5 /* AppDelegate.swift in Sources */,
