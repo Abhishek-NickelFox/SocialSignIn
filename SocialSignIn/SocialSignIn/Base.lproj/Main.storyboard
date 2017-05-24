@@ -102,10 +102,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCm-q7-SHS">
-                                <rect key="frame" x="67" y="59" width="240" height="128"/>
+                                <rect key="frame" x="108" y="48" width="159" height="152"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-JM-28P">
-                                <rect key="frame" x="79" y="250" width="217" height="21"/>
+                                <rect key="frame" x="79" y="276" width="217" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -113,13 +113,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jxP-JM-28P" firstAttribute="top" secondItem="tCm-q7-SHS" secondAttribute="bottom" constant="63" id="1ET-F7-eYc"/>
-                            <constraint firstItem="jxP-JM-28P" firstAttribute="leading" secondItem="GfV-wv-EwN" secondAttribute="leadingMargin" constant="63" id="3UN-2O-m7q"/>
-                            <constraint firstItem="tCm-q7-SHS" firstAttribute="centerX" secondItem="jxP-JM-28P" secondAttribute="centerX" id="9az-hN-Kfv"/>
-                            <constraint firstItem="tCm-q7-SHS" firstAttribute="leading" secondItem="GfV-wv-EwN" secondAttribute="leadingMargin" constant="51" id="Gxh-V6-4VR"/>
-                            <constraint firstItem="tCm-q7-SHS" firstAttribute="top" secondItem="h5m-SE-xyf" secondAttribute="bottom" constant="39" id="Rh2-pq-p0a"/>
-                            <constraint firstItem="dW6-HE-s0U" firstAttribute="top" secondItem="jxP-JM-28P" secondAttribute="bottom" constant="396" id="SgN-1x-LPK"/>
-                            <constraint firstItem="tCm-q7-SHS" firstAttribute="centerX" secondItem="GfV-wv-EwN" secondAttribute="centerX" id="WZW-0X-O4k"/>
+                            <constraint firstItem="jxP-JM-28P" firstAttribute="leading" secondItem="GfV-wv-EwN" secondAttribute="leadingMargin" constant="63" id="128-Ha-PZ4"/>
+                            <constraint firstItem="dW6-HE-s0U" firstAttribute="top" secondItem="jxP-JM-28P" secondAttribute="bottom" constant="370" id="C20-0B-EGa"/>
+                            <constraint firstItem="tCm-q7-SHS" firstAttribute="top" secondItem="h5m-SE-xyf" secondAttribute="bottom" constant="28" id="NkE-Hs-dNg"/>
+                            <constraint firstItem="jxP-JM-28P" firstAttribute="top" secondItem="tCm-q7-SHS" secondAttribute="bottom" constant="76" id="bO8-xa-dJ3"/>
+                            <constraint firstItem="tCm-q7-SHS" firstAttribute="leading" secondItem="GfV-wv-EwN" secondAttribute="leadingMargin" constant="92" id="fKQ-t0-Qvd"/>
+                            <constraint firstItem="tCm-q7-SHS" firstAttribute="centerX" secondItem="jxP-JM-28P" secondAttribute="centerX" id="pAh-O8-MOM"/>
+                            <constraint firstItem="tCm-q7-SHS" firstAttribute="centerX" secondItem="GfV-wv-EwN" secondAttribute="centerX" id="zln-dx-GDl"/>
                         </constraints>
                     </view>
                     <connections>

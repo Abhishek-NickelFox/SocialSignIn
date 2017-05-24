@@ -117,7 +117,10 @@ public class SocialLoginService: NSObject {
     
         if let accessToken = UserDefaults.standard.object(forKey: "LIAccessToken") {
             
-            let targetURLString = "https://api.linkedin.com/v1/people/~:(public-profile-url,first-name,last-name,email-address,picture-url)?format=json"
+//            let targetURLString = "https://api.linkedin.com/v1/people/~:(public-profile-url,first-name,last-name,email-address,picture-url)?format=json"  // take 2 request
+            
+            let targetURLString = "https://api.linkedin.com/v1/people/~:(public-profile-url,first-name,last-name,email-address,picture-urls::(original))?format=json"  // take 2 request
+            
             let request = NSMutableURLRequest(url: URL(string: targetURLString)!)
             request.httpMethod = "GET"
             request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
@@ -135,7 +138,14 @@ public class SocialLoginService: NSObject {
                         let profileUrl = dict["publicProfileUrl"] as! String
                         let firstName = dict["firstName"] as! String
                         let lastName = dict["lastName"] as! String
-                        let pictureUrl = dict["pictureUrl"] as! String
+//                        let pictureUrl = dict["pictureUrl"] as! String  // if take 1 request
+                        
+                        let imgDict = dict["pictureUrls"] as! [String: Any]
+                        let values = imgDict["values"] as! [String]
+                        print(values)
+                        
+                        let pictureUrl = values.first // take 2 request
+                        
                         let profile = UserProfile(firstName: firstName, lastName: lastName, imageUrl: pictureUrl, profileUrl: profileUrl)
                         completion(profile)
                     }
